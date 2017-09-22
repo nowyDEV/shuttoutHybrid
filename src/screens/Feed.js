@@ -9,8 +9,12 @@ const Feed = props => {
   const { photos } = props.data
   return (
     <ScrollView>
-      <View style={{ marginVertical: 20, alignItems: 'center' }}><Text style={{ fontSize: 26 }}>MAIN FEED</Text></View>
-      {photos.map((photo, index) => <Photo key={index} photo={photo} />)}
+      <View style={{ marginVertical: 10, alignItems: 'center' }}>
+        <Text style={{ fontSize: 22 }}>MAIN FEED</Text>
+      </View>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
+        {photos.map((photo, index) => <Photo key={index} photo={photo} />)}
+      </View>
     </ScrollView>
   )
 }

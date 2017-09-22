@@ -11,7 +11,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!(react-native-vector-icons)\/).*/,
         loader: 'babel-loader',
         options: {
           cacheDirectory: true,
@@ -25,7 +25,7 @@ module.exports = {
         loader: 'style-loader!css-loader',
       },
       {
-        test: /\.(gif|jpe?g|png|svg)$/,
+        test: /\.(gif|jpe?g|png|svg|ttf)$/,
         use: {
           loader: 'url-loader',
           options: {
